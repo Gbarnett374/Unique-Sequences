@@ -50,7 +50,7 @@ class fileHelper
     }
   }
 /**
- * Returns the file property.
+ * Returns the handle on the file resource.
  * @return Resource the handle on the file.
  */
   public function getFileResource()

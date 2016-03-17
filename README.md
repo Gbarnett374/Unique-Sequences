@@ -1,6 +1,10 @@
 # Unique-Sequences
 
 ## Usage 
+####Requires PHP >= 5.4 
+
+####Tested with PHP 5.5.3
+
 #### From the project folder run:
 `php app.php < example.txt`
 

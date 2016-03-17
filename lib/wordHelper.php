@@ -8,10 +8,10 @@ class wordHelper
   {
     $this->wordArray = [];
   }
-/*
+/**
   * Determines the sequences in a word.
   * Stores the sequence in the key of the array, and the orignal word as the value.
-  * @param  array $word  word from the file to be parsed.
+  * @param array $word  word from the file to be parsed.
 */
   public function determineSequences($word)
   {
