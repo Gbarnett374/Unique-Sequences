@@ -8,18 +8,16 @@ class wordHelper
   {
     $this->wordArray = [];
   }
-
-  public function determinePermutations($word)
+/* Dertermine the sequences for a word. 
+   The array is keyed by the determined sequence. 
+   Original fullwords are pushed to the array.*/
+  public function determineSequences($word)
   {
-    if (!$this->validLine($word)) {
-      throw new Exception("Not a valid line, based on requirements.");
-    }
     if (!$this->validLength($word[0], 3)) {
       return false;
     }
 
     for ($i = 0; $i < (strlen($word[0]) -1); $i++) {
-      // echo $wordSegment;
       $wordSegment = strtolower(substr(trim($word[0]), $i, 4));
       if (!$this->validLength($wordSegment, 3)) {
         break;
@@ -28,14 +26,9 @@ class wordHelper
     }
   }
 
-  protected function validLine($line)
-  {
-    return !empty($line) ? true : false;
-  }
-
   protected function validLength($word, $length)
   {
-    return strlen($word) > $length ? true : false;
+    return strlen(trim($word)) > $length ? true : false;
   }
 
   public function removeDupes()

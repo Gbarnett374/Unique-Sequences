@@ -28,12 +28,16 @@ class fileHelper
 
   public function write($data)
   {
-    fwrite($this->file, $data);
+    if (!fwrite($this->file, $data)) {
+      throw new Exception("Unable to write the file.");
+    }
   }
 
   public function close()
   {
-    fclose($this->file);
+    if (!fclose($this->file)) {
+      throw new Exception("Unable to close the file");
+    }
   }
 
   public function getFileResource()
