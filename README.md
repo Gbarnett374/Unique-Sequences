@@ -31,4 +31,7 @@ book
 recycle
 bicycle
 recycle
+
+Note : 'cycl' and 'ycle' do not show up, because they each appear in more than one word.
 ````
+
